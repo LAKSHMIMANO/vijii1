@@ -1,27 +1,27 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    char a[100];
-    int i,n,c=0,count1=0,j;
-    printf("enter the string");
+    char a[100], b[100]={'k','a','b','a','l','i'};
+    int n,i,j,k,count=0,m=0;
     scanf("%d",&n);
-    scanf("%s",a);
-    for(i=0;a[i]!='\0';i++)
+    for(i=0;i<n;i++)
     {
-        for(j=i+1;a[j]!='\0';j++)
+        scanf("%s",a);
+        for(j=0;b[j]!='\0';j++)
         {
-        c++;
-    }
-    if((a[i]>='a'&&a[i]<='z')||(a[i]>='A'&&a[i]<='Z'))
-    {
-    count1++;
-    }
-    }
-    if(count1==1)
-    {
-    printf("%d",count1);
-    }
-
-    return 0;
+            for(k=0;a[k]!='\0';k++)
+            {
+                if(b[j]==a[k])
+                {
+                    a[k]='$';
+                    count++;
+                break;
+                }}
+                if(count%6==0)
+                {
+                m++;}
+            }
+}
+printf("%d",m);
+return 0;
 }
