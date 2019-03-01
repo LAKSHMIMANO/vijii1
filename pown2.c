@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main(void) {
-	int num;
-	scanf("%d",&num);
+	int n;
+	scanf("%d",&n);
 	int i,m=2,flag=0;
-	for(i=0;i<num;i++)
+	for(i=0;i<n;i++)
 	{
 		m=2*m;
-		if(m==num)
+		if(m==n)
 		{
 			flag=1;
 			printf("yes");
