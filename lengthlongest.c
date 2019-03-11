@@ -2,19 +2,23 @@
 #include<conio.h>
 int main()
 {
-    int n,k,a[100],i,j;
-    scanf("%d %d",&n,&k);
+    int n,k,a[100],i,j,c=0;
+    scanf("%d ",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
-        for(i=1;i<k;i++)
-        j=0;
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
         {
-            a[i+1]=a[j];
-            j++;
-            
+        if(a[i]==a[j])
+        {
+            c++;
         }
-        printf("%d",a[i]);
+    }}
+    printf("%d",c);
+    
+   
         return 0;
 }
