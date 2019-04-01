@@ -2,41 +2,45 @@
 
 int main()
 {
-    int n,i,j,a[100],b[100],k,t,c=0;
-scanf("%d",&n);
-for(i=0;i<n;i++)
-{
-    scanf("%d",&a[i]);
-}
-for(i=0;i<n;i++)
-{
-    k=0;
-    for(j=i+1;j<n;j++)
+    int a[10],i,j,n,c=0,t,b[10],k=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
     {
-        if(a[i]==a[j])
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+     c=0;
+        for(j=i+1;j<n;j++)
         {
-        b[k]=a[i];
-        k++;
-        
+            if(a[i]==a[j])
+            {
+                c++;
+            }
+        }
+        if(c==1)
+        {
+            b[k]=a[i];
+            k++;
         }
     }
-}
-for(i=0;i<n;i++)
-{
-    for(j=i+1;j<n;j++)
-    {
-        if(b[i]<b[j])
+        for(i=0;i<k;i++)
         {
-            t=b[i];
-            b[i]=b[j];
-            b[j]=t;
+            for(j=i+1;j<k;j++)
+            {
+              if(b[i]>b[j])
+              {
+                  t=b[i];
+                  b[i]=b[j];
+                  b[j]=t;
+              }
+            }
         }
-    }
-}
-for(i=0;i<n;i++)
-{
-printf("%d",b[i]);
-}
+        for(i=0;i<k;i++)
+        {
+            printf("%d ",b[i]);
+        }
+    
 
- return 0;
+    return 0;
 }
